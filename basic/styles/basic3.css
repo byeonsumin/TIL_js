@@ -1,0 +1,29 @@
+#slide_container {
+  background-color: #eee;
+  width: 800px;
+  overflow: hidden;
+}
+#slide_container .slide_wrap {
+  color: red;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 1600px;
+  transform: translateX(-800px);
+}
+#slide_container .slide_wrap .slide {
+  width: 800px;
+  height: 350px;
+  border-width: 1px;
+  border-style: solid;
+}
+#slide_container .slide_wrap .slide1 {
+  border-color: #fa23d6;
+  color: blue;
+}
+#slide_container .slide_wrap .slide2 {
+  border: 1px solid #fa2372;
+}
+
+/*# sourceMappingURL=basic3.css.map */
