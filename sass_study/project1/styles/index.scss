@@ -1,0 +1,16 @@
+@use './common.scss' as *;
+
+#tab_container {
+    background-color: $color-naver;
+    .tab_title {
+        @include flex-flow;
+        a{
+            &:hover {}
+        }
+    }.tab_contents {
+        @include flex-col;
+        .tab {}
+        .tab1 {}
+        .tab2 {}
+    }
+}

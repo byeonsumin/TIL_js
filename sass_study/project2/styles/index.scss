@@ -1,0 +1,53 @@
+// 1360x750
+// #ffffd4
+@use './common.scss' as *;
+
+main {
+    #slide_wrap {
+        @include pc_w_h;
+        background-color: $bg-color;
+        position: relative;
+        .slide_container {
+            height: 100%;
+            .slide1 {
+                height: 100%;
+                .title_contents {
+                    h1 {font-size: $font-title; font-weight: $;}
+                    p {font-size: $font-sub; font-weight: ;}
+                }
+                .bnr_link {
+                    a {@include slide-btn; border: 1px solid;
+                    a {}
+                }
+
+
+
+
+                background-image: url(../image/home_chun_yellow_250813.png);
+                @include bg-cover;
+                background-size: 800px auto;
+                background-position: 120% center;
+            }
+                .title_contents {
+                    h1 {}
+                    p {}
+                }
+            .slide2 {}
+            .slide3 {}
+        .slide_page_btn {
+            @include pst-ab; top: auto; bottom: 50px; left: 60px; //auto : 초기값 설정
+            .page {
+                .pagenation {
+                    span.current {}
+                    span.bar {}
+                    span.total {}
+                }
+                .btn_g {
+                    #prev {}
+                    #next {}
+                }
+            }
+        }
+        }
+    }
+}
