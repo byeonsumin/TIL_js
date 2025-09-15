@@ -1,53 +1,50 @@
-// 1360x750
-// #ffffd4
 @use './common.scss' as *;
 
 main {
-    #slide_wrap {
+    .slide_wrap {
         @include pc_w_h;
-        background-color: $bg-color;
-        position: relative;
+        background-color:$bg-color;
+        position:relative;
         .slide_container {
-            height: 100%;
-            .slide1 {
-                height: 100%;
+            height:100%;
+            .slide {
+                height:100%;
                 .title_contents {
-                    h1 {font-size: $font-title; font-weight: $;}
-                    p {font-size: $font-sub; font-weight: ;}
+                    h1 {font-size:$font-title; font-weight:$weight-bold; line-height:1.3;}
+                    p {font-size:$font-sub; font-weight:$weight-medium; margin:20px 0 300px;}
                 }
                 .bnr_link {
-                    a {@include slide-btn; border: 1px solid;
-                    a {}
+                    a {@include slide-btn; border:1px solid $btn-dark;}
+                    .education_btn {
+                        background-color: $btn-dark; color:$btn-light;
+                    }
+                    .news_btn {}
                 }
-
-
-
-
-                background-image: url(../image/home_chun_yellow_250813.png);
-                @include bg-cover;
-                background-size: 800px auto;
-                background-position: 120% center;
             }
-                .title_contents {
-                    h1 {}
-                    p {}
-                }
+            .slide1 {
+                background-image:url(../images/home_chun_yellow_250813.png);
+                @include bg-cover;
+                background-size:800px auto;
+                background-position:120% center;
+            }
             .slide2 {}
             .slide3 {}
-        .slide_page_btn {
-            @include pst-ab; top: auto; bottom: 50px; left: 60px; //auto : 초기값 설정
-            .page {
-                .pagenation {
-                    span.current {}
-                    span.bar {}
-                    span.total {}
-                }
-                .btn_g {
-                    #prev {}
-                    #next {}
-                }
-            }
         }
+        .slide_page_btn {
+            @include pst-ab; top:auto; bottom:50px; left:60px;
+            @include flex-row; gap:20px;
+            .pagenation {
+                @include flex-row; gap:10px;
+                span {}
+                .current {font-weight:$weight-semi;}
+                .bar {width:100px; height:2px; background-color:$btn-dark;}
+                .total {font-weight:$weight-medium;}
+            }
+            .btn_g {
+                button {background:none;}
+                #prev {margin-right:20px;}
+                #next {}
+            }
         }
     }
 }
