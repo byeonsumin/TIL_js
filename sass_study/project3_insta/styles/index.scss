@@ -1,0 +1,63 @@
+@use './common.scss' as *;
+
+body {
+    background-color: #f5f5f5;
+    main {
+        width: 420px;
+        height: 640px;
+        margin: 50px auto;
+        background-color: #fff;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05);
+        /* Top bar */
+        .top {
+            @include flex-row;
+            justify-content: space-between;
+            height: 50px;
+            padding: 0 15px;
+            .profile {
+                @include flex-row;
+                gap: 4px;
+                .photo {
+                    @include bg;
+                    @include icon20;
+                    border-radius: 50%;
+                    background-image: url(https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+                }
+                .name {font-size: $font-size-m;}
+            }
+            .more {font-size: $font-size-m;}
+        }
+        /* Main photo */
+        .photo {
+            @include bg;
+            height: 460px;
+            background-image: url(https://images.unsplash.com/photo-1476900543704-4312b78632f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D);
+        }
+        .container {
+            .menu {
+                @include flex-row;
+                justify-content: space-between;
+                height: 40px;
+                padding: 0 15px;
+                .left {
+                    @include flex-row;
+                    gap: 6px;
+                    a {@include icon24} 
+                    img {@include img-w100;}
+                }
+                .scrap {font-size: $font-size-m;}
+            }
+            .contents {
+                @include flex-col;
+                align-items: flex-start;
+                gap: 7px;
+                padding: 0 15px; > * {font-size: $font-size-s;}
+                .comments {color: $gray;}
+            }
+        }
+    }
+}
+
+
+
+
