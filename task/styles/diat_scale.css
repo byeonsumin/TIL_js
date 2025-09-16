@@ -1,8 +1,9 @@
 body {
     background-image: url(../images/bg1.jpg);
+    background-position: left;
     background-repeat: no-repeat;
     width: 100%;
-    background-color: #f0f0f0;
+    background-color: #fff;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -14,16 +15,22 @@ body {
     padding: 50px;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    width: 400px;
+    width: 700px;
     text-align: center;
 }
 .container h2 {
-    font-size: 1.8rem;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #fcc06d;
+}
+.container h3 {
+    font-size: 1.1rem;
     margin-bottom: 30px;
     color: #333;
 }
 .container input {
-    width: 80%;
+    width: 60%;
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 30px;
@@ -32,13 +39,12 @@ body {
     text-align: center;
 }
 .container button {
-    width: 50%;
+    width: 60%;
     padding: 15px;
     border: none;
     border-radius: 30px;
     background-color: #fcc06d;
     font-size: 1.4rem;
-    cursor: pointer;
 }
 .container button:hover {
     background-color: #e6a64a;

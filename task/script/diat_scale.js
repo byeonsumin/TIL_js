@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 초과, 부족, 정상 체크
         var diff = w - normal_w; // 양수면 초과, 음수면 부족, 0이면 정상
 
-        // 단순 덮어쓰기
+        // 덮어쓰기
         result = hasValue * msgNormal + (diff > 0) * msgOver + (diff < 0) * msgUnder;
 
         // innerText에 출력
@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (diff > 0) result = msgOver;
             if (diff < 0) result = msgUnder;
         }
-
         goalResult.innerText = result;
     };
 });

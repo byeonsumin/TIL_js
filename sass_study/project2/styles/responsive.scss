@@ -1,8 +1,2 @@
 //반응형 scss
-@use './common.scss' as *;
-
-@media screen and (max-width:1360px) {
-    #slide_container {
-        background-color: $bg-color;
-    }
-}
+@use './common.scss' as*;

@@ -1,9 +1,88 @@
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
+body {}
+
+main .slide_wrap {
+  border-radius: 50px;
+  margin: 100px auto;
+  position: relative;
+  width: 1360px;
+  height: 750px;
+  background-color: #ffffd4;
 }
+main .slide_wrap .slide_container {
+  width: 100%;
+  padding: 100px 80px 150px;
+}
+main .slide_wrap .slide_container .slide1 span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  right: -300px;
+  top: 40px;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../image/imgi_64_home_chun_yellow_250813.png);
+  background-size: 70%;
+}
+main .slide_wrap .slide_container .slide1 {
+  position: relative;
+}
+main .slide_wrap .slide_container .slide1 .title_contents h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+main .slide_wrap .slide_container .slide1 .title_contents p {
+  margin: 20px 0 250px 0;
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+main .slide_wrap .slide_container .slide1 .bnr_link {
+  display: flex;
+  flex-flow: row nowrap;
+}
+main .slide_wrap .slide_container .slide1 .bnr_link a {
+  font-size: 1.125rem;
+  border: 1px solid #000;
+  border-radius: 30px;
+  font-weight: 500;
+}
+main .slide_wrap .slide_container .slide1 .bnr_link a:nth-child(1) {
+  margin-right: 20px;
+  background-color: #000;
+  color: #fff;
+  width: 250px;
+  height: 55px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+main .slide_wrap .slide_container .slide1 .bnr_link a:nth-child(2) {
+  width: 250px;
+  height: 55px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+main .slide_wrap .slide_container .page_btn {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 100px;
+  bottom: 40px;
+}
+main .slide_wrap .slide_container .page_btn .pagenation .bar {
+  display: inline-block;
+  width: 100px;
+  height: 3px;
+  background-color: #000;
+}
+
+/*# sourceMappingURL=main.css.map */
