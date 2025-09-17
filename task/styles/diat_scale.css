@@ -52,6 +52,7 @@ body {
 .result {
     margin-top: 30px;
     font-size: 1.2rem;
-    color: #333;
+    font-weight: 600;
+    color: #ff4747;
     line-height: 30px;
 }
