@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/9073/9073032.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/data.js"></script>
     <script src="./scripts/index.js" defer></script>
 </head>
 <body>
@@ -58,7 +59,7 @@
                                 </button>
                         </div>
                     </div>
-                    <a href="#" class="review">
+                    <a href="#" class="review review_link">
                         <div class="score">
                             <svg class="star star1" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9.00002 14.275L4.85002 16.775C4.66668 16.8917 4.47501 16.9417 4.27501 16.925C4.07501 16.9083 3.90002 16.8417 3.75002 16.725C3.60002 16.6083 3.48335 16.4625 3.40002 16.2875C3.31668 16.1125 3.30002 15.9167 3.35002 15.7L4.45002 10.975L0.775015 7.8C0.608348 7.65 0.504182 7.47916 0.462515 7.2875C0.420848 7.09583 0.433348 6.90833 0.500015 6.725C0.566682 6.54166 0.666682 6.39166 0.800015 6.275C0.933348 6.15833 1.11668 6.08333 1.35002 6.05L6.20002 5.625L8.07502 1.175C8.15835 0.974997 8.28752 0.824997 8.46252 0.724997C8.63752 0.624997 8.81668 0.574997 9.00002 0.574997C9.18335 0.574997 9.36252 0.624997 9.53752 0.724997C9.71252 0.824997 9.84168 0.974997 9.92502 1.175L11.8 5.625L16.65 6.05C16.8833 6.08333 17.0667 6.15833 17.2 6.275C17.3333 6.39166 17.4333 6.54166 17.5 6.725C17.5667 6.90833 17.5792 7.09583 17.5375 7.2875C17.4958 7.47916 17.3917 7.65 17.225 7.8L13.55 10.975L14.65 15.7C14.7 15.9167 14.6833 16.1125 14.6 16.2875C14.5167 16.4625 14.4 16.6083 14.25 16.725C14.1 16.8417 13.925 16.9083 13.725 16.925C13.525 16.9417 13.3333 16.8917 13.15 16.775L9.00002 14.275Z">
@@ -83,7 +84,7 @@
                             <span class="sale">28%</span>
                             <del class="original">55,900원</del>
                             <span class="price_info">
-                                <svg class="info" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="info_icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10 15C10.2833 15 10.5208 14.9042 10.7125 14.7125C10.9042 14.5208 11 14.2833 11 14C11 13.7167 10.9042 13.4792 10.7125 13.2875C10.5208 13.0958 10.2833 13 10 13C9.71667 13 9.47917 13.0958 9.2875 13.2875C9.09583 13.4792 9 13.7167 9 14C9 14.2833 9.09583 14.5208 9.2875 14.7125C9.47917 14.9042 9.71667 15 10 15ZM9 11H11V5H9V11ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20Z">
                                 </svg>
                                 <span class="info">상품 등록일을 기준으로 판매자가 제공하는 권장소비자 가격(도서등인 경우 정가) 또는 기타 온라인 채널 판매 가격 등으로, 할인 기준이 되는 가격입니다.</span>
@@ -109,9 +110,9 @@
                         <div class="product_opt">
                             <select name="color_select" id="color_select">
                                 <option value="none">색상</option>
-                                <option value="black">블랙(39,900원)</option>
+                                <!-- <option value="black">블랙(39,900원)</option>
                                 <option value="rasberry">라즈베리(39,900원)</option>
-                                <option value="amond" disabled>아몬드(39,900원)/품절</option> <!-- disabled : 품절이라서 비활성화 시키기 -->
+                                <option value="amond" disabled>아몬드(39,900원)/품절</option> <-- disabled : 품절이라서 비활성화 시키기 -->
                             </select>
                             <select name="size_select" id="size_select">
                                 <option value="none">사이즈</option>
@@ -124,7 +125,7 @@
                         <div class="order_list">
                             <div class="info">
                                 색상 : <span class="color">블랙</span>
-                                사이즈 : <span class="size">SM</span>
+                                / 사이즈 : <span class="size">SM</span>
                             </div>
                             <button type="button" class="close">X</button>
                             <div class="num_price">
@@ -147,6 +148,20 @@
                     </form>
                 </div>
             </div>
+            <div class="sticky_menu" style="
+                background-color: #f5f5f5;
+                padding: 20px;
+                display: flex;
+                gap: 10px; 
+                position: sticky; top: 100px;">
+                <a href="#" class="product_link">상품정보</a> <!-- 클릭 시 상품정보 위치 이동 --> 
+                <a href="#" class="review_link">리뷰</a> <!-- 클릭 시 리뷰 위치 이동 -->
+                <a href="#">문의</a>
+                <a href="#">배송/환불</a>
+                <a href="#">추천</a>
+            </div>
+            <div class="product_info" style="height: 1000px; background-color: aqua;">상품정보</div>
+            <div class="review_wrap" style="height: 1000px; background-color: lime;">고객리뷰</div>
         </main>
         <footer>footer</footer>
     </div>
