@@ -1,0 +1,40 @@
+//common.scss
+$font-size-12: 0.75rem;
+$font-size-13: 0.813rem;
+$font-size-14: 0.875rem;
+$font-size-15: 0.938rem;
+$font-size-16: 1rem;
+$font-size-17: 1.063rem;
+$font-size-18: 1.125rem;
+$font-size-20: 1.25rem;
+$font-size-30:1.875rem;
+
+$font-bold-600:600;
+$font-bold-700:700;
+
+$color-gray-light-lv1 : #666;
+$color-gray-light-lv2 : #707070;
+$color-gray-light-lv3 : #999;
+$color-gray-light-lv4 : #595959;
+$color-gray-light-lv5 : #353535;
+$color-gray-light-lv6 : #d9d9d9;
+$color-point-1 : #008A48;
+$color-point-2 : #E63D3D;
+
+@mixin content-w {width: 1280px; min-width: 320px; margin: 0 auto;}
+@mixin flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-col {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+@mixin cart_buy_btn {
+    width: 192px;
+    height: 53px;
+}
