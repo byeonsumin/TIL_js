@@ -362,14 +362,21 @@
   display: flex;
   width: 100%;
 }
+#wrap main .contents #orderFrm .order_list .num_price .price {
+  width: 100%;
+  padding-right: 15px;
+  text-align: right;
+  font-size: 0.875rem;
+}
 #wrap main .contents #orderFrm .order_list .num_price .num #minus_btn {
   padding: 0 12PX;
   background-color: #fff;
   font-size: 1.375rem;
 }
 #wrap main .contents #orderFrm .order_list .num_price .num #order_num {
-  width: 35px;
+  width: 32px;
   height: 32px;
+  text-align: center;
 }
 #wrap main .contents #orderFrm .order_list .num_price .num #plus_btn {
   padding: 0 10PX;

@@ -335,8 +335,9 @@
                                 font-size: $font-size-xl;
                             }
                             #order_num {
-                                width: 35px;
+                                width: 32px;
                                 height: 32px;
+                                text-align: center;
                             }
                             #plus_btn {
                                 padding: 0 10PX;
@@ -350,6 +351,12 @@
                                 padding-top: 8px;
                                 padding-right: 15px;
                             }
+                        .price {
+                            width: 100%;
+                            padding-right: 15px;
+                            text-align: right;
+                            font-size: 0.875rem;
+                        }
                         }
                     }
                 }

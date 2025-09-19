@@ -61,7 +61,7 @@ thumnailA[1].addEventListener('mouseover',()=>{
 // 로그인 정보 저장
 // true == 로그인
 // flase == 로그아웃
-localStorage.setItem('isLogin', 'false')
+localStorage.setItem('isLogin', 'true')
 
 
 // 2. 😄저장하기 버튼 클릭 시 로그인 유무에 따라 다른결과 실행
@@ -221,3 +221,68 @@ closeBtn.addEventListener('click',function(){
     sizeSelect.selectedIndex = sizeSelect.options[0]
 })
 
+
+// 9. 주문목록 + 클릭 시, 재고수량까지 수량+금액 표시
+// 필요목록 : +버튼, 재고수량(productOptDB[0].stock), 주문수량, 주문금액(orderPrice), 증가되는 숫자 데이터
+const plusBtn = document.querySelector('#plus_btn')
+const minusBtn = document.querySelector('#minus_btn')
+const orderNum = document.querySelector('#order_num')
+const orderListPrice = document.querySelector('.order_list .price')
+let num = 1; //초기주문수량
+
+// 초기값 : 주문수량칸에 값 1 적용하기
+orderNum.value = num;
+
+// + 버튼 클릭 시 | 주문수량이 1씩 증가하고 | 주문수량에 따라 가격(productOptDB[0].price) 증가하기
+plusBtn.addEventListener('click',()=>{
+    if(num < productOptDB[0].stock){
+        num++;
+        minusPlusFunc() //함수호출
+    }else{
+        alert('최대 구매 수량입니다.')
+    }
+}) //증가 버튼 끝
+//감소 버튼 시작
+// 10. 주문목록 - 클릭 시, 주문수량+주문금액 감소(수량이 1이라면 경고창 출력)
+minusBtn.addEventListener('click',()=>{
+    if(num > 1){ //1보다 크면 감소하겠다.
+        num--;
+        minusPlusFunc() //함수호출
+    }else{
+        alert('최소 구매 수량입니다.')
+    }
+})
+function minusPlusFunc(){ //공통함수생성
+    let total = num * productOptDB[0].price
+    orderNum.value = num
+    orderListPrice.textContent = total.toLocaleString('ko-kr')
+    orderPrice.textContent = total.toLocaleString('ko-kr')
+    return;
+}
+
+
+// 11. (상품 미선택 시) 장바구니, 바로구매 클릭 시 '상품선택하세요' 경고창 출력
+const cartBtn = document.querySelector('#cart_btn')
+const buyBtn = document.querySelector('#buy_btn')
+console.log(cartBtn, buyBtn)
+
+cartBtn.addEventListener('click',()=>{
+    cartBuyFunc('./cart.html')
+})
+buyBtn.addEventListener('click',()=>{
+    cartBuyFunc('./buy.html')
+})
+
+function cartBuyFunc(url){
+    if(colorSelect.selectedIndex == 0 || sizeSelect.selectedIndex == 0){//상품 선택안한걸 확인하는 조건문
+        alert('옵션 선택 후에 버튼을 클릭해주세요')
+    }else{
+        //장바구니 페이지 이동(로그인 유(장바구니) 무(로그인)에 따라)
+        loginStatus = localStorage.getItem('isLogin')
+        if(loginStatus == 'true'){
+            location.href = url
+        }else{location.href = './login.html'}
+    }
+}
+
+// 12. 😄(상품 선택 시) 장바구니, 바로구매 클릭 시 로그인 유무에 따라 다른 페이지로 이동
