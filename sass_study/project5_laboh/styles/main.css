@@ -1,125 +1,166 @@
 @charset "UTF-8";
-body {
+#wrap {
   margin-top: 135px;
 }
-body main {
+#wrap main {
+  width: 100%;
   width: 1280px;
   min-width: 320px;
   margin: 0 auto;
 }
-body main .container {
+#wrap main .container {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-}
-body main .container .overview_img {
   position: relative;
+}
+#wrap main .container .overview_img {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
 }
-body main .container .overview_img .thumnail a img {
+#wrap main .container .overview_img .thumnail a img {
   width: 80px;
   height: 80px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  padding-bottom: 10px;
-  padding-right: 20px;
+  margin-bottom: 10px;
+  margin-right: 20px;
 }
-body main .container .overview_img .overview img {
+#wrap main .container .overview_img .overview {
+  width: 640px;
+  overflow: hidden;
+}
+#wrap main .container .overview_img .overview .thumnails .bnr {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  width: 1080px;
+  transition: transform 0.3s ease-out;
+}
+#wrap main .container .overview_img .overview .thumnails .bnr .thumnail1 {
   width: 640px;
   height: 640px;
 }
-body main .container .overview_img .overview .nxtpage_link {
+#wrap main .container .overview_img .overview .thumnails .bnr .thumnail2 {
+  width: 640px;
+  height: 640px;
+}
+#wrap main .container .overview_img .overview .thumnails .bnr .thumnail3 {
+  width: 640px;
+  height: 640px;
+}
+#wrap main .container .overview_img .overview .thumnails .bnr .thumnail4 {
+  width: 640px;
+  height: 640px;
+}
+#wrap main .container .overview_img .overview .nxtpage_link {
   position: absolute;
-  left: 55%;
+  left: 33%;
   bottom: 20px;
   transform: translateX(-50%); /* 가운데 정렬 */
+  background-color: transparent;
 }
-body main .container .contents {
-  background-color: aquamarine;
-  justify-content: right;
+#wrap main .container .overview_img .overview .nxtpage_link .nxtpage1 {
+  border-radius: 50%;
+  background-color: #afafaf;
+  margin-right: 5px;
+}
+#wrap main .container .overview_img .overview .nxtpage_link .nxtpage2 {
+  border-radius: 50%;
+  background-color: #3a4046;
+  margin-right: 5px;
+}
+#wrap main .container .overview_img .overview .nxtpage_link .nxtpage3 {
+  border-radius: 50%;
+  background-color: #afafaf;
+  margin-right: 5px;
+}
+#wrap main .container .overview_img .overview .nxtpage_link .nxtpage4 {
+  border-radius: 50%;
+  background-color: #afafaf;
+  margin-right: 5px;
+}
+#wrap main .container .contents {
   height: 640px;
   width: 540px;
   padding-left: 80px;
 }
-body main .container .contents .score img {
+#wrap main .container .contents .score img {
   width: 12px;
   height: 12px;
 }
-body main .container .contents .score .star {
+#wrap main .container .contents .score .star {
   color: #3a4046;
   font-size: 0.75rem;
 }
-body main .container .contents .score a {
+#wrap main .container .contents .score a {
   display: inline-block;
   color: #707070;
   font-size: 0.75rem;
   border-bottom: 1px solid #707070;
   margin-bottom: 2px;
 }
-body main .container .contents .product_detail h1 {
-  display: block;
+#wrap main .container .contents .product_detail h1 {
+  display: inline-block;
   font-size: 1.875rem;
   line-height: 130%;
   font-weight: 700;
-  letter-spacing: -2.5px;
+  letter-spacing: -1.81px;
+  line-height: 1.333;
 }
-body main .container .contents .product_detail .shampoo {
-  display: block;
-  padding-top: 6px;
+#wrap main .container .contents .product_detail .shampoo {
+  display: inline-block;
+  padding-top: 15px;
   padding-bottom: 30px;
   color: #666;
   font-size: 0.938rem;
 }
-body main .container .contents .notice .price_information {
+#wrap main .container .contents .notice .price_information {
   display: inline-block;
   margin-bottom: 15px;
 }
-body main .container .contents .notice .price_information .price1 em {
+#wrap main .container .contents .notice .price_information .price1 em {
   color: #008A48;
   font-size: 1.875rem;
   font-weight: 700;
 }
-body main .container .contents .notice .price_information del {
+#wrap main .container .contents .notice .price_information del {
   font-size: 1.125rem;
   color: #999;
 }
-body main .container .contents .notice .benefit {
+#wrap main .container .contents .notice .benefit {
   display: flex;
   flex-flow: row nowrap;
   justify-content: left;
   align-items: center;
   margin-bottom: 10px;
 }
-body main .container .contents .notice .benefit .maximum_benefit {
+#wrap main .container .contents .notice .benefit .maximum_benefit {
   display: block;
   margin-right: 10px;
   font-size: 0.938rem;
   color: #666;
 }
-body main .container .contents .notice .benefit .line {
+#wrap main .container .contents .notice .benefit .line {
   margin-right: 10px;
   display: block;
   font-size: 0.625rem;
   color: #666;
 }
-body main .container .contents .notice .benefit .price2 em {
+#wrap main .container .contents .notice .benefit .price2 em {
   display: block;
   font-size: 1.25rem;
   color: #E63D3D;
   font-weight: 600;
 }
-body main .container .contents .notice .free {
+#wrap main .container .contents .notice .free {
   display: inline-block;
   font-size: 0.813rem;
   color: #999;
   margin-bottom: 25px;
 }
-body main .container .contents #orderFrm .order_list .num_price {
+#wrap main .container .contents #orderFrm .order_list .num_price {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -127,63 +168,73 @@ body main .container .contents #orderFrm .order_list .num_price {
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 }
-body main .container .contents #orderFrm .order_list .num_price .quantity {
+#wrap main .container .contents #orderFrm .order_list .num_price .quantity {
   display: block;
   padding-top: 25px;
   padding-bottom: 25px;
   font-size: 1rem;
   color: #353535;
 }
-body main .container .contents #orderFrm .order_list .num_price .num {
+#wrap main .container .contents #orderFrm .order_list .num_price .num {
   border: 1px solid #D9D9D9;
   background-color: #fff;
 }
-body main .container .contents #orderFrm .order_list .num_price .num #minus_btn {
+#wrap main .container .contents #orderFrm .order_list .num_price .num #minus_btn {
   background-color: #fff;
   width: 30px;
   height: 30px;
 }
-body main .container .contents #orderFrm .order_list .num_price .num #order_num {
+#wrap main .container .contents #orderFrm .order_list .num_price .num #order_num {
+  text-align: center;
+  padding: 5px;
   width: 30px;
   height: 30px;
 }
-body main .container .contents #orderFrm .order_list .num_price .num #plus_btn {
+#wrap main .container .contents #orderFrm .order_list .num_price .num #order_num::-webkit-inner-spin-button,
+#wrap main .container .contents #orderFrm .order_list .num_price .num #order_num::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#wrap main .container .contents #orderFrm .order_list .num_price .num #plus_btn {
   background-color: #fff;
   width: 30px;
   height: 30px;
 }
-body main .container .contents #orderFrm .order_list .order_price {
+#wrap main .container .contents #orderFrm .order_list .order_price {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
   align-items: center;
-  width: 100%;
   padding-top: 25px;
   padding-bottom: 35px;
+  justify-content: space-between;
 }
-body main .container .contents #orderFrm .order_list .order_price h2 {
-  justify-content: left;
+#wrap main .container .contents #orderFrm .order_list .order_price h2 {
+  display: inline-block;
   font-size: 1.063rem;
   color: #595959;
   font-weight: 600;
-  margin-right: 247px;
 }
-body main .container .contents #orderFrm .order_list .order_price .price1 em {
+#wrap main .container .contents #orderFrm .order_list .order_price .price1 em {
+  padding-left: 221px;
+  display: inline-block;
   color: #008A48;
   font-size: 1.875rem;
   font-weight: 700;
 }
-body main .container .contents #orderFrm .order_list .order_price .price2 {
+#wrap main .container .contents #orderFrm .order_list .order_price .price2 {
+  display: inline-block;
   padding-top: 15px;
   font-size: 0.875rem;
   color: #595959;
 }
-body main .container .contents #orderFrm .order_list .order_btn {
+#wrap main .container .contents #orderFrm .order_list .order_btn {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
-body main .container .contents #orderFrm .order_list .order_btn #cart_btn {
+#wrap main .container .contents #orderFrm .order_list .order_btn #cart_btn {
   margin-right: 15px;
   width: 192px;
   height: 53px;
@@ -192,7 +243,7 @@ body main .container .contents #orderFrm .order_list .order_btn #cart_btn {
   color: #008A48;
   border: 1px solid #008A48;
 }
-body main .container .contents #orderFrm .order_list .order_btn #buy_btn {
+#wrap main .container .contents #orderFrm .order_list .order_btn #buy_btn {
   margin-right: 15px;
   width: 192px;
   height: 53px;
@@ -201,7 +252,7 @@ body main .container .contents #orderFrm .order_list .order_btn #buy_btn {
   color: #fff;
   font-weight: 600;
 }
-body main .container .contents #orderFrm .order_list .order_btn #gift_btn {
+#wrap main .container .contents #orderFrm .order_list .order_btn #gift_btn {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -211,11 +262,11 @@ body main .container .contents #orderFrm .order_list .order_btn #gift_btn {
   align-items: center;
   background-color: #E63D3D;
 }
-body main .container .contents #orderFrm .order_list .order_btn #gift_btn svg {
+#wrap main .container .contents #orderFrm .order_list .order_btn #gift_btn svg {
   width: 30px;
   height: 30px;
 }
-body main .container .contents #orderFrm .order_list .order_btn #gift_btn .gift {
+#wrap main .container .contents #orderFrm .order_list .order_btn #gift_btn .gift {
   color: #fff;
   font-size: 0.75rem;
   font-weight: 600;

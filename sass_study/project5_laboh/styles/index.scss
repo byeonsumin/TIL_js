@@ -1,15 +1,15 @@
 //index.scss
 @use './common.scss' as *;
 
-
-body {
+#wrap {
     margin-top: 135px;
     main {
+        width: 100%; 
         @include content-w;
         .container {
-            @include flex-row;
+            display: flex;
+            position: relative;
             .overview_img {
-                position: relative;
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: center;                
@@ -19,31 +19,68 @@ body {
                             width: 80px;
                             height: 80px;
                             @include flex-col;
-                            padding-bottom: 10px;
-                            padding-right: 20px;
+                            margin-bottom: 10px;
+                            margin-right: 20px;
                         }
                     }
                 }
                 .overview {
-                    img {
-                        width: 640px;
-                        height: 640px;
+                    width: 640px;
+                    overflow:hidden;
+                    .thumnails {
+                        .bnr {
+                            display:flex; flex-flow:row nowrap; gap:10px;
+                            width:calc(540px * 2);
+                            transition: transform 0.3s ease-out;
+                            .thumnail1 {
+                                width: 640px;
+                                height: 640px;
+                            }
+                            .thumnail2 {
+                                width: 640px;
+                                height: 640px;
+                            }
+                            .thumnail3 {
+                                width: 640px;
+                                height: 640px;
+                            }
+                            .thumnail4 {
+                                width: 640px;
+                                height: 640px;
+                            }
+                        }
                     }
+                    
                     .nxtpage_link {
                         position: absolute;
-                        left: 55%;
+                        left: 33%;
                         bottom: 20px;
                         transform: translateX(-50%); /* 가운데 정렬 */
-                        .nxtpage1 {}
-                        .nxtpage2 {}
-                        .nxtpage3 {}
-                        .nxtpage4 {}
+                        background-color: transparent;
+                        .nxtpage1 {
+                            border-radius: 50%;
+                            background-color: #afafaf;
+                            margin-right: 5px;
+                        }
+                        .nxtpage2 {
+                            border-radius: 50%;
+                            background-color: #3a4046;
+                            margin-right: 5px;
+                        }
+                        .nxtpage3 {
+                            border-radius: 50%;
+                            background-color: #afafaf;
+                            margin-right: 5px;
+                        }
+                        .nxtpage4 {
+                            border-radius: 50%;
+                            background-color: #afafaf;
+                            margin-right: 5px;
+                        }
                     }
                 }
             }
             .contents {
-                background-color: aquamarine;
-                justify-content: right;
                 height: 640px;
                 width: 540px;
                 padding-left: 80px;
@@ -66,15 +103,16 @@ body {
                 }
                 .product_detail {
                     h1 {
-                        display: block;
+                        display: inline-block;
                         font-size: $font-size-30;
                         line-height: 130%;
                         font-weight: $font-bold-700;
-                        letter-spacing : -2.5px;
+                        letter-spacing : -1.81px;
+                        line-height: 1.333;
                     }
                     .shampoo {
-                        display: block;
-                        padding-top: 6px;
+                        display: inline-block;
+                        padding-top: 15px;
                         padding-bottom: 30px;
                         color: $color-gray-light-lv1;
                         font-size: $font-size-15;
@@ -156,8 +194,15 @@ body {
                                     height: 30px;
                                 }
                                 #order_num {
+                                    text-align: center;
+                                    padding: 5px;
                                     width: 30px;
                                     height: 30px;}
+                                #order_num::-webkit-inner-spin-button,
+                                #order_num::-webkit-outer-spin-button {
+                                    -webkit-appearance: none;
+                                    margin: 0;
+                                }
                                 #plus_btn {
                                     background-color: #fff;
                                     width: 30px;
@@ -166,22 +211,27 @@ body {
                             }
                         }
                         .order_price {
+                            @include flex-row;
                             padding-top: 25px;
                             padding-bottom: 35px;
+                            justify-content: space-between;
                             h2 {
-                                justify-content: left;
+                                display: inline-block;
                                 font-size: $font-size-17;
                                 color: $color-gray-light-lv4;
                                 font-weight: $font-bold-600;
                             }
                             .price1 {
                                 em {
+                                    padding-left: 221px;
+                                    display: inline-block;
                                     color: $color-point-1;
                                     font-size: $font-size-30;
                                     font-weight: $font-bold-700;
                                 }
                             }
                             .price2 {
+                                display: inline-block;
                                 padding-top: 15px;
                                 font-size: $font-size-14;
                                 color: $color-gray-light-lv4;
@@ -228,6 +278,5 @@ body {
                 }
             }
         }
-
     }
 }

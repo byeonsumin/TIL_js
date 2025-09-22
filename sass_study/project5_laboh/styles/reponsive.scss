@@ -1,1 +1,22 @@
 //반응형 scss
+
+@use './common.scss' as *;
+
+@media screen and (max-width: 800px) {
+    #wrap {
+        main {
+            .container {
+                background-color: red;
+                @include flex-col;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
