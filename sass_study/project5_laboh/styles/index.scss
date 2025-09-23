@@ -29,7 +29,7 @@
                     overflow:hidden;
                     .thumnails {
                         .bnr {
-                            display:flex; flex-flow:row nowrap; gap:10px;
+                            display:flex; flex-flow:row nowrap;
                             width:calc(540px * 2);
                             transition: transform 0.3s ease-out;
                             .thumnail1 {
@@ -221,20 +221,20 @@
                                 color: $color-gray-light-lv4;
                                 font-weight: $font-bold-600;
                             }
-                            .price1 {
-                                em {
-                                    padding-left: 221px;
-                                    display: inline-block;
-                                    color: $color-point-1;
-                                    font-size: $font-size-30;
-                                    font-weight: $font-bold-700;
+                            .p_group {
+                                display: flex;
+                                .price1 {
+                                    em {
+                                        color: $color-point-1;
+                                        font-size: $font-size-30;
+                                        font-weight: $font-bold-700;
+                                    }
                                 }
-                            }
-                            .price2 {
-                                display: inline-block;
-                                padding-top: 15px;
-                                font-size: $font-size-14;
-                                color: $color-gray-light-lv4;
+                                .price2 {
+                                    padding-top: 15px;
+                                    font-size: $font-size-14;
+                                    color: $color-gray-light-lv4;
+                                }
                             }
                         }
                         .order_btn {
