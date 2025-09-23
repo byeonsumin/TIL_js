@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //반응형 scss
 
 @use './common.scss' as *;
@@ -20,3 +21,27 @@
 
 
 
+=======
+//반응형 scss
+
+@use './common.scss' as *;
+
+@media screen and (max-width: 800px) {
+    #wrap {
+        main {
+            .container {
+                background-color: red;
+                @include flex-col;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+>>>>>>> 426d3ebf1100b737c562121d085efc37f863875e
