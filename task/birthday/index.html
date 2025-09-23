@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탄생화 종류와 꽃말 메세지 출력하기 - 과제</title>
+    <link rel="stylesheet" href="./styles/birthday_reset.css">
+    <link rel="stylesheet" href="./styles/birthday.css">
+    <script src="./script/birthday.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="flower_image">
+            <img src="./images/flower_1.jpg" alt="" class="flower1"> 
+            <img src="./images/flower_2.jpg" alt="" class="flower2"> 
+            <img src="./images/flower_4.jpg" alt="" class="flower3"> 
+            <img src="./images/flower_4.jpg" alt="" class="flower4"> 
+        </div>
+        <h1>당신의 생일은 몇 월인가요?</h1>
+        <div class="birthday-picker">
+            <input type="number" id="year" placeholder="년도 (예: 2000)" />
+            <input type="number" id="month" placeholder="월 (1~12)" />
+            <input type="number" id="day" placeholder="일 (1~31)" />
+            <button type="button" id="flower_Btn">탄생화와 꽃말은?</button>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
+
+</body>
+</html>

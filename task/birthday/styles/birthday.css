@@ -1,0 +1,117 @@
+body {
+    background: 
+    url(../images/flower_bg.jpg); /* 배경 이미지 */
+    background-position: center;
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+}
+.container .flower_image {
+    position: relative;
+    left: 0;
+}
+.container .flower_image .flower1 {
+    width: 130px;
+    animation: swing 4s ease-in-out infinite;
+    position: absolute;
+    left: 900px;
+    top: 100px;
+}
+
+.container .flower_image .flower2 {
+    width: 130px;
+    animation: swing 3s ease-in-out infinite;
+    position: absolute;
+    left: -530px; 
+    top: -300px;
+
+}
+
+.container .flower_image .flower3 {
+    width: 60px;
+    animation: swing 5s ease-in-out infinite;
+    position: absolute;
+    left: 850px;
+    top: -250px;
+}
+.container .flower_image .flower4 {
+    width: 60px;
+    animation: swing 4s ease-in-out infinite;
+    position: absolute;
+    left: -350px;
+    top: 200px;
+}
+
+@keyframes swing {
+    0% {
+        transform: translateX(0) rotate(15deg); 
+    }
+    25% {
+        transform: translateX(-20px) rotate(-15deg); 
+    }
+    50% {
+        transform: translateX(20px) rotate(15deg);
+    }
+    75% {
+        transform: translateX(-20px) rotate(-15deg);
+    }
+    100% {
+        transform: translateX(0) rotate(15deg);
+    }
+}
+
+.container h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.containe .birthday-picker {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    width: 140px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button {
+    width: 455px;
+    margin-top: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #8ba7d9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+
+}
+
+button:hover {
+    background-color: #758fbd;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
