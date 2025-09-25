@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탄생화와 꽃말 찾기</title>
+    <link rel="stylesheet" href="./styles/birthday_reset.css">
+    <link rel="stylesheet" href="./styles/index(teacher).css">
+    <!-- 제이쿼리 CDN 필수연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script/db.js"></script>
+    <!-- <script src="./script/index(teacher).js" defer></script> -->
+    <script src="./script/index2(teacher).js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>The Flower of My Birth Day</h1>
+        <h2>나의 <em>탄생화</em> 찾기</h2>
+        <div class="result_flower">
+            <h2>당신의 탄생화는 '<em></em>' 입니다.</h2>
+            <p>꽃말 : <span></span></p>
+        </div>
+        <form action="#" method="get" id="birthFrm">
+            <div class="input">
+                <input type="number" id="year" name="year">
+                <input type="number" id="month" name="month">
+                <input type="number" id="day" name="day">
+            </div>
+            <button type="button" id="result_btn">
+                나의 꽃과 꽃말 만나기
+            </button>
+            <button type="button" id="share_btn">
+                내 탄생화와 꽃말 공유하기
+            </button>
+        </form>
+        <div class="flower"><img src="https://i.pinimg.com/1200x/5b/20/de/5b20ded8b2b1f6990497fcfd87035c50.jpg" alt=""></div>
+    </main>
+</body>
+</html>
