@@ -17,5 +17,5 @@ table,tr,td,th {border-collapse:collapse;}
 a {text-decoration:none; color:#000;}
 fieldset {border:0;}
 legend {display:none;}
-button {cursor:pointer;}
+button {cursor:pointer; background: none;}
 .skip {display:none;}
