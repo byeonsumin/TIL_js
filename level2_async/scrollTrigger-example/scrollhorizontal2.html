@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> | 가로스크롤트리거활용</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <style>
+        body {overflow-x: hidden;}
+        #wrap {
+            width: 100%;
+            height: 100vh;
+        }
+        #wrap header {
+            margin-left: 50px;
+            position: relative;
+            
+        }
+        #wrap header h1 {
+            position: absolute;
+            
+        }
+        #wrap header h1 a {}
+        #wrap header h1 a img {
+            width: 108px;
+            height: 45px;
+            margin-top: 20px;
+        }
+        #wrap main {}
+        #wrap main .box {
+            width: 100%;
+            height: 100vh;
+            background-image: url(./images/etude_002.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #wrap main .box h1 span {
+            display: block;
+            margin-left: 50px;
+            padding-top: 700px;
+            font-size: 2.5rem; font-weight: 700;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        #wrap main .box p span {
+            color: rgb(73, 73, 73);
+            display: inline-block;
+            margin-left: 50px;
+            font-size: 1.1rem; font-weight: 400;
+            margin-top: 30px;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+
+        #wrap main .wrap {
+            background-image: url('https://www.etude.com/wp-content/uploads/2025/04/balloon_makeup_main.jpg');
+            width: 100%;
+        }
+        #wrap main .wrap .container {
+            width: 100%;
+            display: flex;
+            width: 400vw;
+        }
+        .sticky-header {
+            position: sticky;
+            z-index: 20;
+        }
+        .sticky-header h1 {
+            color: #fff;
+            width: 100%;
+            position: absolute;
+            font-size: 5rem; font-weight: 700;
+            display: block;
+            margin-top: 200px;
+            margin-left: 50px;
+        }
+        .sticky-header p {
+            display: inline-block;
+            position: absolute;
+            font-size: 1.5rem; font-weight: 400;
+            margin-top: 330px;
+            margin-left: 50px;
+        }
+        #wrap main .wrap .container img {
+            width: 100vw;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1><a href="#"><img src="./images/logo_w.png" alt=""></a></h1>
+        </header>
+        <main>
+            <section class="box">
+                <h1><span>What's in my eyes</span></h1>
+                <p><span>한 톤, 반 톤 컬러의 온도편차</span></p>
+            </section>
+            <section class="wrap">
+                <div class="sticky-header">
+                    <h1>Makeup Look</h1>
+                    <p>지금 나에게 어울리는 메이크업 룩은?</p>
+                </div>
+                <div class="container">
+                    <img src="./images/etude_001.jpg" alt="">
+                    <img src="./images/etude_003.jpg" alt="">
+                    <img src="./images/imgi_29_92d57939303acf2e73df7146806ae795.jpg" alt="">
+                    <img src="./images/etude_002.jpg" alt="">
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger) //★scrollTrigger 필수
+
+        const container = document.querySelector('.container')
+        const scrollW = container.offsetWidth - window.innerWidth;
+        console.log(container.offsetWidth, scrollW)
+
+        //scrollTrigger
+        gsap.utils.toArray('.wrap').forEach((obj)=>{
+            console.log(obj)
+            const banyan = gsap.timeline({
+                scrollTrigger:{
+                    trigger:obj,
+                    start:'center center',
+                    end:()=> "+=" + scrollW,
+                    scrub:true,
+                    pin:true,
+                    anticipatePin:1,
+                },default:{ease:'none'},
+            })
+            banyan.fromTo(obj.querySelector('.container'), {
+                x:0,
+            }, {
+                x:-scrollW
+            })
+
+        })
+        gsap.to('.box h1 span', {
+            scrollTrigger:gsapToTrigger('.box'),
+            opacity:1, y:0, duration:1, delay:0.3,
+        })
+        gsap.to('.box p span', {
+            scrollTrigger:gsapToTrigger('.box'),
+            opacity:1, y:0, duration:1, delay:0.7,
+        })
+
+        function gsapToTrigger(target, action='play none none none'){
+            return {
+                trigger:target,
+                start:'top 80%',
+                toggleActions:action,
+            }
+        }
+    </script>
+</body>
+</html>
